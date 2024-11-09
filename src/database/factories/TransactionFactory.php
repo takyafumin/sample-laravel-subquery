@@ -13,11 +13,14 @@ class TransactionFactory extends Factory
 {
     /**
      * ユーザ ID のリスト
+     *
      * @var array<int, int>
      */
     protected array $userIds = [];
+
     /**
      * 商品 ID のリスト
+     *
      * @var array<int, int>
      */
     protected array $productIds = [];
@@ -25,8 +28,8 @@ class TransactionFactory extends Factory
     /**
      * ユーザ ID と商品 ID を設定
      *
-     * @param array<int, int> $productIds 商品 ID のリスト
-     * @param array<int, int> $productIds 商品 ID のリスト
+     * @param  array<int, int>  $productIds  商品 ID のリスト
+     * @param  array<int, int>  $productIds  商品 ID のリスト
      * @return self
      */
     public function setRelationIds(array $userIds, array $productIds)

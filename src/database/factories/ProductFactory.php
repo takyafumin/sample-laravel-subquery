@@ -20,7 +20,7 @@ class ProductFactory extends Factory
     {
         return [
             'code' => $this->faker->uuid(),
-            'name' => '商品：' . $this->faker->realText(10),
+            'name' => '商品：'.$this->faker->realText(10),
             'price' => $this->faker->numberBetween(100, 10000),
             'image' => $this->faker->imageUrl(),
             'published_at' => $this->faker->dateTime,

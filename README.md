@@ -21,7 +21,7 @@ composer install
 
 ```bash
 cd src
-php artisan migrate
+php artisan migrate:fresh --seed
 ```
 
 ### 4. 起動
@@ -29,6 +29,25 @@ php artisan migrate
 ```bash
 cd src
 php artisan serve
+```
+
+## クエリの利用検証
+
+tinker 機能を使って検証する
+
+```bash
+# tinker を起動する
+cd src
+php artisan tinker
+```
+
+tinker 上で Usecase を実行する
+
+```php
+use Packages\ProductList\Usecase\Query\ProductListQuery;
+use Packages\ProductList\Usecase\ProductListSearchUsecase;
+$usecase = new ProductListSearchUsecase(new ProductListQuery());
+$usecase->exec();
 ```
 
 ## プロジェクトの初期セットアップ
